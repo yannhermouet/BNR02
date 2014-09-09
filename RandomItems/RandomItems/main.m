@@ -31,7 +31,7 @@ int main(int argc, const char * argv[])
             // Log the description of item
             NSLog(@"%@", item);
         }
-        
+/*
         BNRItem *item = [[BNRItem alloc]init];
         
         //This creates an NSString, "Red Sofa" and gives it to the BNRItem
@@ -45,6 +45,16 @@ int main(int argc, const char * argv[])
         //This sends the value 100 to be used as the valueInDollars of this BNRItem
         //[item setValueInDollars:100];
         item.valueInDollars=100;
+*/
+        
+        BNRItem *item = [[BNRItem alloc]initWithItemName:@"Red Sofa"
+                                          valueInDollars:100 serialNumber:@"A1B2C"];
+        
+        BNRItem *itemWithName = [[BNRItem alloc]initWithItemName:@"Blue Sofa"];
+        NSLog(@"%@", itemWithName);
+        
+        BNRItem *itemWithNoName = [[BNRItem alloc]init];
+        NSLog(@"%@", itemWithNoName);
         
         // NSLog(@"%@ %@ %@ %d", [item itemName], [item dateCreated],
         //      [item serialNumber], [item valueInDollars]);

@@ -16,6 +16,7 @@
     NSDate *_dateCreated;
 }
 
+//Designated intializer for BNRItem
 - (instancetype)initWithItemName:(NSString *)name
                    valueInDollars:(int)value
                      serialNumber:(NSString *)sNumber;
