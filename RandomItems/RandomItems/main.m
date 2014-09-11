@@ -16,7 +16,14 @@ int main(int argc, const char * argv[])
         
         //Create a mutable array object, store its address in items variable
         NSMutableArray *items = [[NSMutableArray alloc] init];
-        
+
+        for (int i = 0; i<10; i++)
+        {
+            BNRItem *item = [BNRItem randomItem];
+            [items addObject:item];
+        }
+    
+/*
         //Send the message addObject: to the NSMutableArray pointed to
         //by the variable items, passing a string each time
         [items addObject:@"One"];
@@ -31,6 +38,8 @@ int main(int argc, const char * argv[])
             // Log the description of item
             NSLog(@"%@", item);
         }
+*/
+        
 /*
         BNRItem *item = [[BNRItem alloc]init];
         
@@ -47,6 +56,8 @@ int main(int argc, const char * argv[])
         item.valueInDollars=100;
 */
         
+/*
+        
         BNRItem *item = [[BNRItem alloc]initWithItemName:@"Red Sofa"
                                           valueInDollars:100 serialNumber:@"A1B2C"];
         
@@ -62,7 +73,8 @@ int main(int argc, const char * argv[])
         
         //The %@ token is replaced with the result of sending the description message to the corresponding argument
         NSLog(@"%@", item);
-        
+*/
+ 
         //Destroy the mutable array object
         items = nil;
         
